@@ -1,7 +1,7 @@
 {
   "name": "Fischmarkt",
   "version": "0.0.1",
-  "author": "Ionic Framework",
+  "author": "biersoeckli",
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",
