@@ -26,7 +26,7 @@ export class AppComponent {
       Parse.initialize(environment.parseAppId);
       (Parse as any).serverURL = environment.parseServerUrl;
 
-      this.ngOnInit();
+      this.init();
 
     } catch (ex) {
       alert('Ein unerwarteter fehler ist aufgetreten.');
@@ -35,12 +35,12 @@ export class AppComponent {
     }
   }
 
-  async ngOnInit() {
+  async init() {
     try {
 
       this.currentUser = await Parse.User.current();
       if (!this.currentUser) {
-       // this.presentAlert('Der Benutzer ist nicht angemeldet.');
+        // this.presentAlert('Der Benutzer ist nicht angemeldet.');
       } else {
         this.currentUser = await Parse.User.current().fetch();
         const alltasks = [] as Promise<any>[];
