@@ -25,4 +25,3 @@ This repo contains the Fischmarkt, one of total 3 components from the <a href="h
     </td>
   </tr>
 </table>
-
