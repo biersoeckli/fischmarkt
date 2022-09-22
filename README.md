@@ -7,7 +7,7 @@ This repo contains the Fischmarkt, one of total 3 components from the <a href="h
 - <a href="https://github.com/biersoeckli/bfa">BFA (Bataillonsinterner Finanzausgleich)</a>
 - <a href="https://github.com/biersoeckli/fischmarkt">Fischmarkt (this repo)</a>
 
-## Whats this? (todo)
+## What's this? (todo)
 
 ## Rules (todo)
 
