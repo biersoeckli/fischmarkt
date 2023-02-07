@@ -21,7 +21,7 @@ export class AuthPage implements OnInit {
   async login() {
     this.isLoading = true;
     try {
-      await Parse.User.login(this.username, this.password);
+      await Parse.User.logIn(this.username, this.password);
       this.router.navigateByUrl('/');
     } catch (ex) {
       console.error(ex);
