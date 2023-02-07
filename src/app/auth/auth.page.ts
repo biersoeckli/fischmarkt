@@ -16,6 +16,9 @@ export class AuthPage implements OnInit {
   constructor(private readonly router: Router) { }
 
   ngOnInit() {
+    if (Parse.User.current()) {
+      this.router.navigateByUrl('/');
+    }
   }
 
   async login() {
