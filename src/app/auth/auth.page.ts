@@ -11,6 +11,7 @@ export class AuthPage implements OnInit {
 
   username?: string;
   password?: string;
+  isLoading = false;
 
   constructor(private readonly router: Router) { }
 
@@ -18,12 +19,15 @@ export class AuthPage implements OnInit {
   }
 
   async login() {
+    this.isLoading = true;
     try {
       await Parse.User.login(this.username, this.password);
       this.router.navigateByUrl('/');
     } catch (ex) {
       console.error(ex);
       alert('Es ist ein Fehler aufgetreten');
+    } finally {
+      this.isLoading = false;
     }
   }
 

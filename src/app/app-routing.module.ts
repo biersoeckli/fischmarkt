@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { CanActivateAuthenticated } from './guards/authenticated.guard';
 
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule),
+    canActivate: [CanActivateAuthenticated]
   },
   {
     path: 'login',
@@ -12,20 +14,25 @@ const routes: Routes = [
   },
   {
     path: 'antrag',
-    loadChildren: () => import('./antrag-edit/antrag-edit.module').then( m => m.AntragEditPageModule)
+    loadChildren: () => import('./antrag-edit/antrag-edit.module').then( m => m.AntragEditPageModule),
+    canActivate: [CanActivateAuthenticated]
   },
   {
     path: 'fish-detail/:fishTypeId',
-    loadChildren: () => import('./fish-detail/fish-detail.module').then( m => m.FishDetailPageModule)
+    loadChildren: () => import('./fish-detail/fish-detail.module').then( m => m.FishDetailPageModule),
+    canActivate: [CanActivateAuthenticated]
   },
   {
     path: 'ranking',
-    loadChildren: () => import('./ranking/ranking.module').then( m => m.RankingPageModule)
+    loadChildren: () => import('./ranking/ranking.module').then( m => m.RankingPageModule),
+    canActivate: [CanActivateAuthenticated]
   },
   {
     path: 'decision-board',
-    loadChildren: () => import('./decision-board/decision-board.module').then( m => m.DecisionBoardPageModule)
-  },  {
+    loadChildren: () => import('./decision-board/decision-board.module').then( m => m.DecisionBoardPageModule),
+    canActivate: [CanActivateAuthenticated]
+  },
+  {
     path: 'auth',
     loadChildren: () => import('./auth/auth.module').then( m => m.AuthPageModule)
   }
