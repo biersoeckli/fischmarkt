@@ -49,7 +49,7 @@ export class AppComponent {
         alltasks.push(this.userService.loadAllUsers());
         alltasks.push(this.fishTypeService.loadAllFishTypes());
 
-        for (let item of alltasks) {
+        for (const item of alltasks) {
           await item;
         }
       }

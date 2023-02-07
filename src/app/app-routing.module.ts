@@ -25,7 +25,11 @@ const routes: Routes = [
   {
     path: 'decision-board',
     loadChildren: () => import('./decision-board/decision-board.module').then( m => m.DecisionBoardPageModule)
+  },  {
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then( m => m.AuthPageModule)
   }
+
 ];
 @NgModule({
   imports: [
