@@ -40,7 +40,7 @@
     <ion-item *ngIf="fishTypeService.allFishTypes">
       <ion-label position="stacked">Fisch Typ</ion-label>
       <ion-select placeholder="Wähle den Fisch" (ionChange)="setFischType($event)">
-        <ion-select-option *ngFor="let item of fishTypeService.allFishTypes" [value]="item">{{item.attributes.name}}</ion-select-option>
+        <ion-select-option *ngFor="let item of fishTypeService.allFishTypes" [value]="item">{{item.attributes.name}} (<span [style]="'color: ' + (item.attributes.points <= 0 ? 'green' : 'red') + ';'">{{item.attributes.points}} Punkte</span>)</ion-select-option>
       </ion-select>
     </ion-item>
 
