@@ -1,11 +1,11 @@
-import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from "@angular/router";
+import { ActivatedRouteSnapshot, Router, RouterStateSnapshot, UrlTree } from "@angular/router";
 import { Observable } from "rxjs";
 import * as Parse from 'parse';
 import { Injectable } from "@angular/core";
 import { environment } from "src/environments/environment";
 
 @Injectable()
-export class CanActivateAuthenticated implements CanActivate {
+export class CanActivateAuthenticated  {
 
   constructor(private router: Router) { }
 
