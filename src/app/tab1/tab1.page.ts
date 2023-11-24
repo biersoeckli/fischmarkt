@@ -30,6 +30,9 @@ export class Tab1Page {
     this.groupFishNames = ids;
   }
 
+  openReglement() {
+    window.open('/assets/Fischerreglement_Spit_Bat_75.pdf', '_self');
+  }
   
   openAttendanceList() {
     window.open(environment.attendanceListUrl, '_self');
